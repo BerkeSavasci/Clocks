@@ -1,0 +1,16 @@
+
+a
+java:S1301I"KReplace this "switch" statement by "if" statements to increase readability.(¢ì„¯
+?
+java:S1948,")Make "service" transient or serializable.(£ªØñ
+C
+java:S1948-"(Make "laufen" transient or serializable.(¢å­•ÿÿÿÿÿ
+7	java:S131I""Add a default case to this switch.(¢ì„¯
+M
+java:S1612V"7Replace this lambda with method reference 'this::tick'.(ğïÓ¥
+U
+java:S1161Y":Add the "@Override" annotation above this method signature(†§şıÿÿÿÿ
+Q
+java:S2696}"6Make the enclosing method "static" or remove this set.(¥¬Îùÿÿÿÿ
+Q
+java:S2696~"6Make the enclosing method "static" or remove this set.(Êõ¥ÿÿÿÿÿÿ

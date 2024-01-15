@@ -1,22 +1,10 @@
 
 h
-java:S1301H"KReplace this "switch" statement by "if" statements to increase readability.(¢ì„¯8©ˆ½ÍĞ1
+java:S1301D"KReplace this "switch" statement by "if" statements to increase readability.(¢ì„¯8©ˆ½ÍĞ1
 F
-java:S1948.")Make "uhrzeit" transient or serializable.(Ô˜ó8³ˆ½ÍĞ1
->	java:S131H""Add a default case to this switch.(¢ì„¯8µˆ½ÍĞ1
+java:S1948*")Make "uhrzeit" transient or serializable.(Ô˜ó8³ˆ½ÍĞ1
+>	java:S131D""Add a default case to this switch.(¢ì„¯8µˆ½ÍĞ1
 X
-java:S2696{"6Make the enclosing method "static" or remove this set.(¥¬Îùÿÿÿÿ8·ˆ½ÍĞ1
+java:S2696w"6Make the enclosing method "static" or remove this set.(¥¬Îùÿÿÿÿ8·ˆ½ÍĞ1
 X
-java:S2696|"6Make the enclosing method "static" or remove this set.(Êõ¥ÿÿÿÿÿÿ8·ˆ½ÍĞ1
-V
-java:S1128"9Remove this unused import 'java.awt.event.WindowAdapter'.(­ˆàÛ8·ˆ½ÍĞ1
-Y
-java:S1128"7Remove this unused import 'java.awt.event.WindowEvent'.(Àø®Ãÿÿÿÿÿ8·ˆ½ÍĞ1
-]
-java:S1128";Remove this unused import 'java.util.concurrent.Executors'.(äåÒÛÿÿÿÿÿ8¸ˆ½ÍĞ1
-Z
-java:S1128"8Remove this unused import 'java.util.concurrent.Future'.(á¬øíıÿÿÿÿ8¸ˆ½ÍĞ1
-l
-java:S1128"JRemove this unused import 'java.util.concurrent.ScheduledExecutorService'.(Êßˆÿÿÿÿÿ8¸ˆ½ÍĞ1
-W
-java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8¸ˆ½ÍĞ1
+java:S2696x"6Make the enclosing method "static" or remove this set.(Êõ¥ÿÿÿÿÿÿ8·ˆ½ÍĞ1

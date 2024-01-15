@@ -83,10 +83,8 @@ public class DigitalUhr implements PropertyChangeListener {
      */
     public void tick() {
         if (uhrAn) {
-            Platform.runLater(() -> {
-                anzeige.setText(String.format("%02d:%02d:%02d",
-                        zeit.getStunde(), zeit.getMinute(), zeit.getSekunde()));
-            });
+            Platform.runLater(() -> anzeige.setText(String.format("%02d:%02d:%02d",
+                    zeit.getStunde(), zeit.getMinute(), zeit.getSekunde())));
         }
     }
 

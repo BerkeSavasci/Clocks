@@ -3,6 +3,10 @@ package uhr;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.time.LocalTime;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * eine Uhr mit Sekundenzählung
@@ -10,13 +14,18 @@ import java.time.LocalTime;
 public class Zeit {
 
     private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
-    private int stunde, minute, sekunde;
+    private int stunde;
+    private int minute;
+    private int sekunde;
+    private ScheduledExecutorService service;
+    private Future<?> laufen;
 
     /**
      * erstellt die Uhr
      */
     public Zeit() {
-        laufen();
+        service = Executors.newSingleThreadScheduledExecutor();
+        laufen = service.scheduleAtFixedRate(this::laufen, 0, 1, TimeUnit.SECONDS);
     }
 
     /**
@@ -36,6 +45,7 @@ public class Zeit {
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         pcs.removePropertyChangeListener(listener);
     }
+
     /**
      * liefert die aktuelle Stunde
      *
@@ -68,7 +78,9 @@ public class Zeit {
      */
     public void laufen() {
         LocalTime jetzt = LocalTime.now();
-        int oldStunde = stunde, oldMinute = minute, oldSekunde = sekunde;
+        int oldStunde = stunde;
+        int oldMinute = minute;
+        int oldSekunde = sekunde;
 
         stunde = jetzt.getHour();
         pcs.firePropertyChange("stunde", oldStunde, stunde);
@@ -80,4 +92,11 @@ public class Zeit {
         pcs.firePropertyChange("sekunde", oldSekunde, sekunde);
     }
 
+    /**
+     * Closes the application.
+     */
+    public void starterSchliessen() {
+        laufen.cancel(false);
+        service.shutdown();
+    }
 }
